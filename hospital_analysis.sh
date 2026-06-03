@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # hospital_analysis.sh
-# Member 5 - Clinical Analyst
+# Member 5 - Clinical analyst
 
 process_vitals() {
 
