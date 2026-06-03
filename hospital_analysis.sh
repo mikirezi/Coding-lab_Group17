@@ -26,6 +26,7 @@ water_audit() {
     echo "=================================="
     echo "Running ICU water reserve audit... $(date)"
     echo "=================================="
+    # Calculate average water usage from log file
     awk -F'|' '
     /ICU_WATER_RESERVE/ {
         total += $3
