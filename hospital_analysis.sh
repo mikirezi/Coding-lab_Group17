@@ -14,6 +14,11 @@ process_vitals() {
     TEMPERATURE_LOG="active_logs/temperature.log"
     OUTPUT_FILE="reports/critical_alerts.txt"
 
+    if [ ! -d "reports" ]; then
+        echo "[ERROR] reports/ directory not found. Run hospital_admin.sh first."
+        return 1
+    fi
+
     {
         echo "============================================"
         echo " KNH CRITICAL ALERTS REPORT"
