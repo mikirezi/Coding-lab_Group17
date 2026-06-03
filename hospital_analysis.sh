@@ -10,8 +10,8 @@ process_vitals() {
     echo "   Running at: $(date)"
     echo "============================================"
 
-    HEART_RATE_LOG="active_logs/heart_rate.log"
-    TEMPERATURE_LOG="active_logs/temperature.log"
+   HEART_RATE_LOG="active_logs/heart_rate_log.log"
+    TEMPERATURE_LOG="active_logs/temperature_log.log"
     OUTPUT_FILE="reports/critical_alerts.txt"
 
     if [ ! -d "reports" ]; then
