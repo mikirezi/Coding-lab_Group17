@@ -24,7 +24,7 @@ water_audit() {
 
 
     echo "=================================="
-    echo "Running ICU water reserve audit..."
+    echo "Running ICU water reserve audit... $(date)"
     echo "=================================="
     awk -F'|' '
     /ICU_WATER_RESERVE/ {
