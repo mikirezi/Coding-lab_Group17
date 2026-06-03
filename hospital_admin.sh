@@ -6,6 +6,7 @@ echo "Starting Hospital Admin System..."
 
 initialize_system() {
       echo "Initializing KNH system environment..."
+    # Written by Member 1 (Architect)
     
     if [ ! -d "active_logs" ]; then
         echo "Creating active_logs directory..."
@@ -28,7 +29,7 @@ initialize_system() {
         echo "reports already exists."
     fi
     
-    echo "System initialization completed."
+    echo "System initialization completed successfully."
    
 }
 
