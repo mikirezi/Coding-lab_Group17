@@ -11,13 +11,15 @@ initialize_system() {
 secure_data() {
     echo "Securing active_logs..."
     chmod 700 active_logs
-    ls -l
-    # TODO: Member 2 will implement security logic
+    ls -ld active_logs
 } 
 
 # Execution flow
 initialize_system
-secure_data
+secure_data 
+
+echo "System Environment Secured"
+echo "Date: $(date)"
 
 echo "System Environment Secured"
 echo "Date: $(date)
