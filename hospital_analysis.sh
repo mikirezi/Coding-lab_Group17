@@ -54,3 +54,29 @@ process_vitals() {
 }
 
 process_vitals
+
+water_audit() {
+    echo "============================================"
+    echo "   KNH Water Usage Audit"
+    echo "   Running at: $(date)"
+    echo "============================================"
+    
+    WATER_LOG="active_logs/water_usage_log.log"
+    
+    echo "[INFO] Calculating average water usage for ICU_WATER_RESERVE..."
+    
+    awk -F'|' '/ICU_WATER_RESERVE/ {
+        sum += $3
+        count++
+    }
+    END {
+        if (count > 0)
+            printf "\n  Device       : ICU_WATER_RESERVE\n  Total Readings : %d\n  Average Usage  : %.2f Liters/min\n\n", count, sum/count
+        else
+            print "  No data found for ICU_WATER_RESERVE"
+    }' "$WATER_LOG"
+    
+    echo "============================================"
+}
+
+water_audit
