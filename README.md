@@ -1,5 +1,4 @@
 # Coding-lab_Group17
-
 ## Project: KNH Digital Infrastructure (DevOps Simulation)
 
 ### Objective
@@ -8,7 +7,6 @@ This project simulates a hospital data monitoring system using shell scripting, 
 ---
 
 ## Group Roles
-
 - Member 1: System Setup (initialize directories and environment)
 - Member 2: Security Lead (file permissions using chmod and verification)
 - Member 3: Orchestrator (main script execution flow)
@@ -19,7 +17,6 @@ This project simulates a hospital data monitoring system using shell scripting, 
 ---
 
 ## Files in this Project
-
 - hospital_system.py → Generates simulated hospital sensor data
 - hospital_admin.sh → Initializes system and applies security
 - hospital_analysis.sh → Analyzes logs and extracts critical data
@@ -33,3 +30,24 @@ This project simulates a hospital data monitoring system using shell scripting, 
 Start the system:
 ```bash
 python3 hospital_system.py start
+```
+
+Run admin setup:
+```bash
+bash hospital_admin.sh
+```
+
+Run analysis:
+```bash
+bash hospital_analysis.sh
+```
+
+Archive logs:
+```bash
+bash hospital_archive.sh
+```
+
+Stop the system:
+```bash
+python3 hospital_system.py stop
+```
